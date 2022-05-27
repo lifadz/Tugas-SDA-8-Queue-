@@ -12,7 +12,7 @@ struct sembakoLine{
 };
 
 int maximalLineLength = 7;
-sembakoLine *head, *tail, *cur, *del, *newNode;
+sembakoLine *head, *tail, *cur, *del, *dataNew;
 
 // Count Queue Data
 int countQueueData()
@@ -64,12 +64,12 @@ void enqueueSembakoData( string name, int age ){
       head->next = NULL;
       tail = head;
     }else{
-      newNode = new sembakoLine();
-      newNode->name = name;
-      newNode->age = age;
-      newNode->next = NULL;
-      tail->next = newNode;
-      tail = newNode;
+      dataNew = new sembakoLine();
+      dataNew->name = name;
+      dataNew->age = age;
+      dataNew->next = NULL;
+      tail->next = dataNew;
+      tail = dataNew;
     }
 
   }
